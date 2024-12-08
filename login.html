@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng Nhập / Đăng Ký</title>
+  <script src="./js/login.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.8/axios.min.js"></script>
+<style>
+        body {
+  font-family: Arial, sans-serif;
+  background: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-image: url(https://tuyensinh.haui.edu.vn/static/uploads/albumImages/1523862552207.png);
+}
+
+.container {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  padding: 20px;
+}
+
+.form-container {
+  position: relative;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.hidden {
+  display: none;
+}
+
+input {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+p {
+  font-size: 14px;
+  text-align: center;
+}
+
+p a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
+    </style>  
+
+</head>
+<body>
+  <div class="container">
+    <div class="form-container">
+      <form id="login-form" class="form">
+        <h2>Đăng Nhập</h2>
+        <input id="userName" type="text" placeholder="Tên đăng nhập" required>
+        <input id="password"  type="password" placeholder="Mật khẩu" required>
+        <button onclick="signin()" id="btn-signin" type="submit">Đăng Nhập</button>
+        <p>Chưa có tài khoản? <a href="#" onclick="showRegister()">Đăng Ký</a></p>
+      </form>
+      
+      <form id="register-form" class="form hidden">
+        <h2>Đăng Ký</h2>
+        <input  type="text" placeholder="Tên đăng nhập" required>
+        <input  type="email" placeholder="Email" required>
+        <input type="password" placeholder="Mật khẩu" required>
+        <input type="password" placeholder="Nhập lại mật khẩu" required>
+        <button type="submit">Đăng Ký</button>
+        <p>Đã có tài khoản? <a href="#" onclick="showLogin()">Đăng Nhập</a></p>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
+
