@@ -1,0 +1,20 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.than {
+    border: 2px solid green;
+    padding: 20px;
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    margin: 20px;
+}
+.tt {
+    background-color: rgb(240, 183, 38);
+    padding: 20px;
+    text-align: center;
+    margin: 2px 0px 2px 20px;
+    border-radius: 3px;
+}
